@@ -9,7 +9,7 @@ export default function Intro() {
         init(textRef.current,{
             showCursor:true,
             backDelay:1500,
-            strings: ["Haire Stylist","Your best Friend", "Person who makes you look babulous"]
+            strings: ["Haire Stylist","Your best Friend", "Person who makes you look fabulous"]
         })
     },[])
     return (

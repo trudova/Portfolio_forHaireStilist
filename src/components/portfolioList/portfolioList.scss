@@ -4,6 +4,11 @@ li{
             margin-right: 3.5rem;
             padding: 10px;
             cursor: pointer;
+            @include mobile{
+              margin-right: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             &.active{
                 background-color: $primarycolor1;
                 color: white;

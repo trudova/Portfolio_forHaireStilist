@@ -11,12 +11,21 @@
        margin: 1rem;
        z-index: 1;
        top: 0;
+       @include mobile{
+            font-size: 20px;
+       }
     }
     ul{
         margin: 1rem;
         // padding: 0;
         list-style: none;
         display: flex;
+        @include mobile{
+            font-size: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin:10px 0;
+        }
         li{
             font-size: 1.2rem;
             margin-right: 3.5rem;
@@ -35,7 +44,9 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-    
+        @include mobile{
+            width: 100%;
+        }
         .item{
             width: 22rem;
             height: 22rem;
@@ -49,6 +60,10 @@
             position: relative;
             transition: $mainTransition;
             cursor: pointer;
+            @include mobile{
+                width: 170px;
+                height: 140px;
+            }
             img{
                 width: 20rem;
                 height: 20rem;
@@ -58,6 +73,9 @@
             h3{
                 position: absolute;
                 font-size: 3rem;
+                @include mobile{
+                    font-size: 1rem;
+                }
             }
             &:hover{
                 background-color: $primarycolor1;

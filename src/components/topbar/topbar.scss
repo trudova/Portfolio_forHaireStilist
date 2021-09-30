@@ -24,16 +24,25 @@
                color: $mainColor;
                 text-shadow: 0.3px 0.5px 0.5px white;
                 margin-right: 40px;
+                @include mobile{
+                   font-size: 30px;
+               }
                sup{
                    font-size: 25px;
                    color: $primaryGray;
                    text-shadow: 0.3px 0.3px 0.3px $primaryGray;
+                   @include mobile{
+                   font-size: 15px;
+               }
                }
            }
            .itemComtainer{
                display: flex;
                align-items: center;
                margin-right: 20px;
+               @include mobile{
+                   display: none;
+               }
                .icon{
                    font-size: 25px;
                    margin-right: 5px;

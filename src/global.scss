@@ -7,3 +7,10 @@ $primarycolor2 : #F3D3D3;
 $primarycolor4:#FFF1E9;
 $primaryGray: #45454D;
 $mainTransition: all 0.5s ease;
+$width: 768px;
+
+@mixin mobile {
+    @media (max-width: #{$width}) {
+        @content
+    }
+}
