@@ -1,0 +1,77 @@
+@import "../../global.scss";
+.intro{
+    background-color: white;
+    display: flex;
+    .left{
+        flex:1;
+        .imgcontainet{
+            width: 35rem;
+            height: 35rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 2rem;
+            img{
+                width: 25rem;
+                height: 25rem;
+                border-radius: 50%;
+                object-fit: cover;
+               margin: 1rem;
+            }
+        }
+    }
+     .right{
+        flex:1;
+        position: relative;
+        .wrapper{
+            width: 100%;
+            height: 100%;
+            padding-left: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                font-size: 4rem;
+                margin: 0.7rem 0;
+                color: $primarycolor1;
+            }
+            h2{
+                font-size: 2rem;
+
+            }
+            h3{
+                  font-size: 1.7rem;
+                span{
+                    font-size: 2rem;
+                    color: $primarycolor1;
+                }
+                .ityped-cursor{
+                    animation: blink 1s infinite;
+                }
+                @keyframes blink {
+                    50%{
+                        opacity: 1;
+                    }
+                    100%{
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+        a{
+            position: absolute;
+            bottom: 1rem;
+            left: 30%;
+            .icon{
+                font-size: 8rem;
+                color: $primarycolor1;
+                animation: arrowBlink 2s infinite;
+            }
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0;
+                }
+            }
+        }
+    }
+}

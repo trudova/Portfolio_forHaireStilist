@@ -1,0 +1,115 @@
+@import "../../global.scss";
+.topbar{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: white;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    transition: all 1s ease;
+   .wrapper{
+       padding: 10px 30px;
+       display: flex;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: space-between;
+       .left{
+           display: flex;
+           align-items: center;
+           .logo{
+               text-decoration: none;
+               font-weight: 700;
+               font-size: 40px;
+               color: $mainColor;
+                text-shadow: 0.3px 0.5px 0.5px white;
+                margin-right: 40px;
+               sup{
+                   font-size: 25px;
+                   color: $primaryGray;
+                   text-shadow: 0.3px 0.3px 0.3px $primaryGray;
+               }
+           }
+           .itemComtainer{
+               display: flex;
+               align-items: center;
+               margin-right: 20px;
+               .icon{
+                   font-size: 25px;
+                   margin-right: 5px;
+                   color: $primaryGray;
+                   text-shadow: 0.3px 0.3px 0.3px $mainColor 
+                   !important;
+               }
+               span{
+                   font-size: 18px;
+                   font-weight: 700;
+                   color: $mainColor;
+                   text-shadow: 0.2px 0.2px 0.2px white;
+               }
+           }
+       }
+       .right{
+           .hamburger{
+               width: 2rem;
+               height: 1.5rem;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
+               cursor: pointer;
+            span{
+                width: 100%;
+                height: 3px;
+                background-color: $mainColor;
+                transform-origin: left;
+                transition: all 1s ease;
+            }
+           }
+       }
+   }
+   &.active{
+       background-color: $primaryHover;
+       color: $mainColor;
+       .wrapper{
+      
+       .left{
+           .itemComtainer{
+               .icon{
+                   color: $mainColor;
+               }
+              span{
+                   color: white;
+                   text-shadow: 0.2px 0.2px 0.2px $mainColor;
+               
+              }
+           }
+           .logo{
+            color: $mainColor;
+            text-shadow: 0.3px 0.3px 0.3px white;
+               
+            sup{
+                color: white;
+                text-shadow: 0.3px 0.3px 0.3px $mainColor;
+               
+            }
+           }
+        }
+    }
+    .hamburger{
+       span{
+           &:first-child{
+               background-color:$mainColor;
+               transform: rotate(45deg);
+           }
+           &:nth-child(2){
+               opacity: 0;
+           }
+           &:last-child{
+            background-color:$mainColor;
+              transform: rotate(-45deg);
+           }
+       }
+   }
+   }
+   
+}
